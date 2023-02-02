@@ -13,14 +13,14 @@ axios.get(url).then((response) => {
   // id
   // title
   // completed
-	const todo = response.data;
-  const ID = todo.ID
-  const title = todo.Title;
-  const finished = todo.finished;
+	const todo = response.data as Todo;
+  const id = todo.id
+  const title = todo.title;
+  const completed = todo.completed;
 
   console.log(`
-    The Todo with ID: ${ID}
+    The Todo with ID: ${id}
     Has a title of: ${title}
-    Is it finished? ${finished}
+    Is it finished? ${completed}
   `)
 });
