@@ -10,7 +10,7 @@ class Node {
 }
 class LinkedList extends Sorter_1.Sorter {
     constructor() {
-        super();
+        super(...arguments);
         this.head = null;
     }
     add(data) {
