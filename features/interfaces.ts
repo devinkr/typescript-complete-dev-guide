@@ -18,7 +18,7 @@
 // printVehicle(oldCivic);
 
 // Better way
-interface Vehicle {
+interface VehicleInter {
 	name: string;
 	year: Date; // type can be any type
 	broken: boolean;
@@ -52,7 +52,7 @@ const aDrink = {
 	},
 };
 
-const printVehicle = (vehicle: Vehicle): void => {
+const printVehicle = (vehicle: VehicleInter): void => {
 	console.log(`Name: ${vehicle.name}`);
 	console.log(`Year: ${vehicle.year} `);
 	console.log(`Broken: ${vehicle.broken} `);
@@ -72,4 +72,3 @@ printSummary(aDrink);
 // Use interfaces for gatekeeping
 // Create functions that accept arguments that are typed with interfaces
 // Objects/classes can decide to implement a given interface to work with a function
-
