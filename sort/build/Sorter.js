@@ -1,17 +1,20 @@
 "use strict";
+// Interface was used back when Sorter class was not abstract and used Sortable in constructor.
+// interface Sortable {
+// 	length: number;
+// 	compare(leftIndex: number, rightIndex: number): boolean;
+// 	swap(leftIndex: number, rightIndex: number): void;
+// }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sorter = void 0;
 class Sorter {
-    constructor(collection) {
-        this.collection = collection;
-    }
     sort() {
-        const { length } = this.collection;
+        const { length } = this;
         // Abstracted array specific swapping into separate class to have generic sort class.
         for (let i = 0; i < length; i++) {
             for (let j = 0; j < length - i - 1; j++) {
-                if (this.collection.compare(j, j + 1)) {
-                    this.collection.swap(j, j + 1);
+                if (this.compare(j, j + 1)) {
+                    this.swap(j, j + 1);
                 }
             }
         }

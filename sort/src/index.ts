@@ -1,13 +1,22 @@
 import { Sorter } from './Sorter';
 import { CharactersCollection } from './CharactersCollection';
 import { NumbersCollection } from './NumbersCollection';
+import { LinkedList } from './LinkedList';
 
 const numberCollection = new NumbersCollection([10, 3, -5, 0]);
-const sorter = new Sorter(numberCollection);
-sorter.sort();
+numberCollection.sort();
 console.log(numberCollection.data);
 
 const charactersCollection = new CharactersCollection('Xaayb');
-const charSorter = new Sorter(charactersCollection)
-charSorter.sort();
-console.log(charactersCollection.data)
+charactersCollection.sort();
+console.log(charactersCollection.data);
+
+const linkedList = new LinkedList();
+linkedList.add(5);
+linkedList.add(1);
+linkedList.add(-3);
+linkedList.add(20);
+linkedList.add(100);
+
+linkedList.sort();
+linkedList.print();
