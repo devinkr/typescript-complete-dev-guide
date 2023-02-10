@@ -30,3 +30,6 @@ const holdNum = new HoldAnything();
 holdNum.data = 123;
 const holdStr = new HoldAnything();
 holdStr.data = 'A string';
+// Inheritance vs Composition
+// Inheritance is characterized by an "is a" relationship
+// Composition is characterized by a "has a" relationship
