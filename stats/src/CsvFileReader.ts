@@ -1,3 +1,4 @@
+// Composition approach
 import fs from 'fs';
 
 export class CsvFileReader {
@@ -13,6 +14,6 @@ export class CsvFileReader {
 			.split('\n')
 			.map((row: string): string[] => {
 				return row.split(',');
-			})
+			});
 	}
 }
